@@ -24,6 +24,8 @@ article img{
   margin-right: auto;
 
 }
+article img:hover{filter: opacity(.5);
+    -webkit-transform:scale(0.9);transform:scale(0.9);}
 i {
     font-size: 2.4rem;
 }

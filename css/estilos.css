@@ -47,6 +47,7 @@ a{
 }
 h1{color: #fff;}
 
+article{ display: flex;}
 
 #parrafo1{ text-align: center;
     color:#1eb65d;}
@@ -148,7 +149,7 @@ nav a:hover{
 .contenedorc{
     width: 100%;
     max-width: 1200PX;
-    height: 500px;
+    height: auto;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;

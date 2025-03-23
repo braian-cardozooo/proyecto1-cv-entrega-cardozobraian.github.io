@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Recuerdos y Cartas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #fff;
+            font-family: 'Georgia', serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        .title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3rem;
+            color: #d63384;
+        }
+        .heart {
+            color: red;
+            font-size: 1.5rem;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .list-group-item {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        .btn-love {
+            background-color: #ff4d6d;
+            border: none;
+            color: white;
+        }
+        .btn-love:hover {
+            background-color: #d63384;
+        }
+        /* Corazones flotantes */
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .heart-float {
+            position: fixed;
+            bottom: -50px;
+            font-size: 24px;
+            color: red;
+            animation: float 5s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Corazones flotantes -->
+    <div class="heart-float" style="left: 10%;">❤️</div>
+    <div class="heart-float" style="left: 20%; animation-delay: 1s;">💖</div>
+    <div class="heart-float" style="left: 30%; animation-delay: 2s;">💕</div>
+    <div class="heart-float" style="left: 40%; animation-delay: 3s;">❤️</div>
+    <div class="heart-float" style="left: 50%; animation-delay: 4s;">💖</div>
+    <div class="heart-float" style="left: 60%; animation-delay: 2s;">💕</div>
+    <div class="heart-float" style="left: 70%; animation-delay: 1s;">❤️</div>
+
+    <div class="container mt-5 text-center">
+        <h1 class="title">💖 Nuestro Diario de Amor 💖</h1>
+        <p class="lead">Un viaje a través del tiempo, guardado en nuestra página.  
+        📅 Fecha de creación: <strong>22/03/2025</strong></p>
+
+        <!-- Imagen romántica -->
+        <div class="text-center">
+            <img src="imagenes/20250101_063811.heic" class="img-fluid rounded shadow-lg mt-3" alt="Recuerdos románticos" style="max-height: 400px;">
+        </div>
+
+        <!-- Lista de recuerdos -->
+        <div class="mt-4">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0">💌 23 de marzo de 2025</h5>
+                        <small class="text-muted">Mi primera carta plasmada aquí</small>
+                    </div>
+                    <a href="Paraelamordemivida.html" class="btn btn-love">Ir 💕</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0">❤️ -</h5>
+                        <small class="text-muted">-</small>
+                    </div>
+                    <a href="pagina2.html" class="btn btn-love">Ir 💞</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0">💓 -</h5>
+                        <small class="text-muted">-</small>
+                    </div>
+                    <a href="pagina3.html" class="btn btn-love">Ir 💝</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

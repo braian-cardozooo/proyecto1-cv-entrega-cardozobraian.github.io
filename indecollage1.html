@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,11 +11,10 @@
             background-size: cover;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
             text-align: center;
             color: white;
-            overflow: hidden; /* Evita el scroll por los corazones */
+            flex-direction: column;
+            min-height: 100vh; /* Permite que crezca según el contenido */
         }
         .cuadro {
             background: rgba(255, 255, 255, 0.9);
@@ -26,8 +25,7 @@
             text-align: center;
             color: #333;
             border: 8px solid #ff4081;
-            position: relative;
-            z-index: 10;
+            margin: 20px auto; /* Agrega margen para separar el contenido */
         }
         .foto-grande {
             width: 100%;
@@ -46,7 +44,6 @@
             color: #ff4081;
             margin: 10px 0;
         }
-        /* Estilo del botón */
         .btn-love {
             display: inline-block;
             background-color: #ff4081;
@@ -98,11 +95,9 @@
     <img src="imagenes/Picsart_25-03-25_12-29-30-713.jpg" alt="Foto juntos" class="foto-grande">
     <div class="corazon">❤️❤️❤️</div>
     
-    <!-- Botón de Volver -->
     <a href="indexlove.html" class="btn-love">⬅ Volver</a>
 </div>
 
-<!-- Script para crear los corazones flotantes -->
 <script>
     function crearCorazon() {
         const heart = document.createElement('div');
@@ -110,18 +105,15 @@
         heart.classList.add('heart');
         document.body.appendChild(heart);
 
-        // Posición aleatoria en la pantalla
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = Math.random() * 20 + 15 + "px"; // Tamaños variados
-        heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // Velocidades variadas
+        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
 
-        // Eliminar corazones después de la animación
         setTimeout(() => {
             heart.remove();
         }, 5000);
     }
 
-    // Generar corazones continuamente
     setInterval(crearCorazon, 200);
 </script>
 
